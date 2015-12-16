@@ -1,0 +1,32 @@
+{
+    "network": {
+        "servers": [ "elk:5000" ],
+        "ssl ca": "/etc/ssl/logstash-forwarder.crt"
+    },
+    "files": [
+        {
+            "paths":  [ "/var/log/forwarder/nginx/access.log" ],
+            "fields": { "type": "nginx-access" }
+        },
+        {
+            "paths":  [ "/var/log/forwarder/nginx/error.log" ],
+            "fields": { "type": "nginx-error" }
+        },
+        {
+            "paths":  [ "/var/log/forwarder/apache/access.log" ],
+            "fields": { "type": "apache-access" }
+        },
+        {
+            "paths":  [ "/var/log/forwarder/apache/error.log" ],
+            "fields": { "type": "apache-error" }
+        },
+        {
+            "paths":  [ "/var/log/forwarder/symfony/dev.log" ],
+            "fields": { "type": "symfony_dev" }
+        },
+        {
+            "paths":  [ "/var/log/forwarder/symfony/prod.log" ],
+            "fields": { "type": "symfony_prod" }
+        }
+    ]
+}
