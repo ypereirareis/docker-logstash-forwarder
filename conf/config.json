@@ -5,6 +5,14 @@
     },
     "files": [
         {
+            "paths":  [ "/var/log/forwarder/mysql/mysql-slow.log" ],
+            "fields": { "type": "mysql-slow" }
+        },
+        {
+            "paths":  [ "/var/log/forwarder/mysql/error.log" ],
+            "fields": { "type": "mysql-error" }
+        },
+        {
             "paths":  [ "/var/log/forwarder/nginx/access.log" ],
             "fields": { "type": "nginx-access" }
         },
@@ -22,11 +30,11 @@
         },
         {
             "paths":  [ "/var/log/forwarder/symfony/dev.log" ],
-            "fields": { "type": "symfony_dev" }
+            "fields": { "type": "symfony-dev" }
         },
         {
             "paths":  [ "/var/log/forwarder/symfony/prod.log" ],
-            "fields": { "type": "symfony_prod" }
+            "fields": { "type": "symfony-prod" }
         }
     ]
 }
