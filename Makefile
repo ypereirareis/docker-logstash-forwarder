@@ -7,7 +7,7 @@ build: remove
 	@echo "$(step) Building Logstash Forwarder $(step)"
 	@$(cmd) build
 
-remove:
+remove: stop
 	@echo "$(step) Removing Logstash Forwarder $(step)"
 	@$(cmd) rm -f
 

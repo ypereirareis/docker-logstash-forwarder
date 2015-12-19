@@ -9,10 +9,6 @@
             "fields": { "type": "mysql-slow" }
         },
         {
-            "paths":  [ "/var/log/forwarder/mysql/error.log" ],
-            "fields": { "type": "mysql-error" }
-        },
-        {
             "paths":  [ "/var/log/forwarder/nginx/access.log" ],
             "fields": { "type": "nginx-access" }
         },
